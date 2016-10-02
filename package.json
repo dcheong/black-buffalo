@@ -1,5 +1,13 @@
 {
-  "name"    : "calc-app",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "calc-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "babel-preset-es2016": "^6.16.0",
+    "babelify": "^7.3.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
+  }
 }
