@@ -26,6 +26,8 @@ app.use(wdm);
 
 app.use(webpackHotMiddleware(compiler));
 
+app.use('/static', express.static(`${__dirname}/../static`))
+
 const server = app.listen(PORT, 'localhost', err => {
   if (err) {
     console.error(err);
