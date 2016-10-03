@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import styles from './Home.css';
 import Todo from './Todo';
+import InputTodo from './InputTodo';
 
 const propTypes = {
   todos: React.PropTypes.array,
@@ -19,6 +20,7 @@ export default class Home extends Component {
         <div className={styles.container}>
           <img className={styles.daruma} src="static/img/daruma.png" />
           <h2>daruma</h2>
+          <InputTodo add={this.props.addTodo} />
           {
             this.props.todos.map((todo) => <Todo id={todo.id} content={todo.content} />)
           }

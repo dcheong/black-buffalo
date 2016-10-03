@@ -7,12 +7,14 @@ const initialState = {
 export default function todo(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      let todoArray =  this.state.todos.slice();
-      todoArray.push({id: todoArray.length++, content: action.content});
-      return Object.assign(this.state, { todos:todoArray });
+      console.log('add called');
+      console.log(state.todos);
+      let todoArray =  state.todos.slice();
+      todoArray.push({id: todoArray.length, content: action.content});
+      return Object.assign(state, { todos:todoArray });
     case REMOVE_TODO:
-      let slicedArray = this.state.todos.filter(({id, content}) => id!=action.index);
-      return Object.assign(this.state, {todos: slicedArray });
+      let slicedArray = state.todos.filter(({id, content}) => id!=action.index);
+      return Object.assign(state, {todos: slicedArray });
     default:
       return state;
   }
