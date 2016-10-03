@@ -19,7 +19,7 @@ export default class Home extends Component {
         <div className={styles.container}>
           <h2>Home</h2>
           {
-            this.props.todos.map(() => <Todo id={this.id} content={this.content} />)
+            this.props.todos.map((todo) => <Todo id={todo.id} content={todo.content} />)
           }
         </div>
       </div>
