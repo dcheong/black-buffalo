@@ -17,8 +17,8 @@ export default class Home extends Component {
     return (
       <div>
         <div className={styles.container}>
-          <img src="/static/img/daruma.png" />
-          <h2>Home</h2>
+          <img className={styles.daruma} src="static/img/daruma.png" />
+          <h2>daruma</h2>
           {
             this.props.todos.map((todo) => <Todo id={todo.id} content={todo.content} />)
           }
