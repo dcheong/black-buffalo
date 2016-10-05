@@ -33,11 +33,18 @@
   height: auto;
 }
 
-.inputTodo {
-  margin: 20px;
+input {
+  -webkit-appearance: none;
+  appearance: none;
   padding: 10px;
   border-radius: 5px;
   border: none;
+  box-shadow: 0px 1px 5px rgba(50,50,50,0.3);
+}
+
+.inputTodo {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .closeTodo {

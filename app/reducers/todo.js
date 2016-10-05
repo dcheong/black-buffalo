@@ -1,6 +1,6 @@
-import { ADD_TODO, REMOVE_TODO } from '../actions/todo';
+import { ADD_TODO, REMOVE_TODO } from '../actions/todo'
 
-const initialState = [{id: 0, content: 'First todo'}]
+const initialState = []
 
 export default function todo(state = initialState, action) {
   switch (action.type) {
@@ -8,11 +8,10 @@ export default function todo(state = initialState, action) {
       return [
         ...state,
         {id: state.length, content: action.content}
-      ];
+      ]
     case REMOVE_TODO:
-      let slicedArray = state.filter(({id, content}) => id!=action.index);
-      return Object.assign(state, {todos: slicedArray });
+      return state.filter(({id, content}) => id!=action.index)
     default:
-      return state;
+      return state
   }
 }
