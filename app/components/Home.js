@@ -21,7 +21,6 @@ export default class Home extends Component {
       <div>
         <div className={styles.container}>
           <img className={styles.daruma} src="static/img/daruma.png" />
-          <h2>daruma</h2>
           <InputTodo add={this.props.addTodo} />
           {
             this.props.todos.map((todo) => <Todo closeTodo={self.props.removeTodo} id={todo.id} content={todo.content} />)

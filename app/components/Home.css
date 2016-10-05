@@ -26,11 +26,17 @@
     margin-top: 5px;
     margin-bottom: 5px;
     box-shadow: 0px 1px 5px rgba(50,50,50,0.3);
+    opacity: 0.5;
+}
+
+.todo:hover {
+  opacity: 1;
 }
 
 .daruma {
   width: 30%;
   height: auto;
+  opacity: 0.5;
 }
 
 input {
