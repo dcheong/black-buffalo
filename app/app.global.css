@@ -1,4 +1,10 @@
+html {
+  padding: 0;
+}
+
 body {
+  padding: 0;
+  overflow: hidden;
   position: relative;
   color: white;
   height: 100vh;
@@ -33,3 +39,67 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+.topbar {
+  width: 100%;
+  height: 30px;
+}
+
+.drag {
+  width: 100%;
+  height: 100%;
+  float: left;
+  -webkit-app-region: drag;
+}
+
+.controls {
+  width: 100px;
+  position: absolute;
+  right: 0px;
+}
+
+#min-btn {
+  color: rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  border:1px solid rgba(0,0,0,0.4);
+  border-radius: 50%;
+  float: right;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-app-region: no-drag;
+  transition: 0.1s all ease;
+}
+
+#max-btn {
+  background-color: rgba(0,255,0,0.4);
+  border-radius: 50%;
+  float: right;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-app-region: no-drag;
+  transition: 0.1s all ease;
+}
+
+#close-btn {
+  background-color: rgba(255,0,0,0.4);
+  border-radius: 50%;
+  float: right;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-app-region: no-drag;
+  transition: 0.1s all ease;
+}
+
+.control-btn {
+  opacity: 0.5;
+  text-align: center;
+}
+
+.control-btn:hover {
+  opacity: 1;
+}
+
+
