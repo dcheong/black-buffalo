@@ -10,7 +10,7 @@ export default function todo(state = initialState, action) {
         {id: state.length, content: action.content}
       ];
     case REMOVE_TODO:
-      let slicedArray = state.todos.filter(({id, content}) => id!=action.index);
+      let slicedArray = state.filter(({id, content}) => id!=action.index);
       return Object.assign(state, {todos: slicedArray });
     default:
       return state;

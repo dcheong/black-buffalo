@@ -4,17 +4,25 @@ import styles from './Home.css';
 
 const propTypes = {
   id: React.PropTypes.number,
-  content: React.PropTypes.string
+  content: React.PropTypes.string,
+  closeTodo: React.PropTypes.func
 }
 
 export default class Todo extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+    this.handleClose = this.handleClose.bind(this)
+  }
+  handleClose() {
+    this.props.closeTodo(this.props.id)
   }
   render() {
     return (
       <div className={styles.todo}>
         { this.props.content }
+        <div onClick={this.handleClose} className={styles.closeTodo}>
+          x
+        </div>
       </div>
     );
   }
