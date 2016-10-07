@@ -41,7 +41,6 @@
 
 input {
   -webkit-appearance: none;
-  appearance: none;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -56,4 +55,5 @@ input {
 .closeTodo {
   float: right;
   color: darkgray;
+  cursor: pointer;
 }
