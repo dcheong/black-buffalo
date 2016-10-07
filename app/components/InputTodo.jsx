@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import styles from './Home.css'
 
 const propTypes = {
@@ -28,8 +27,8 @@ export default class InputTodo extends Component {
           <input type="text" value={this.state.text} onChange={this.handleTextChange} placeholder="Enter a new item..." />
         </form>
       </div>
-    );
+    )
   }
 }
 
-InputTodo.propTypes = propTypes;
+InputTodo.propTypes = propTypes

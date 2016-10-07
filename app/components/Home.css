@@ -16,7 +16,10 @@
 }
 
 .todo {
-    display: block;
+    width: 300px;
+    max-width: 300px;
+    display: table;
+    table-layout: fixed;
     margin: auto;
     background-color: #fff;
     border: solid white 1px;
@@ -31,6 +34,23 @@
 
 .todo:hover {
   opacity: 1;
+}
+
+.todoContent {
+  display: table-cell;
+  width: auto;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+.closeTodo {
+  width: 10%;
+  display: table-cell;
+  color: darkgray;
+  cursor: pointer;
 }
 
 .daruma {
@@ -52,8 +72,3 @@ input {
   margin-bottom: 10px;
 }
 
-.closeTodo {
-  float: right;
-  color: darkgray;
-  cursor: pointer;
-}

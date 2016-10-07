@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import styles from './Home.css';
+import React, { Component } from 'react'
+import styles from './Home.css'
 
 const propTypes = {
   id: React.PropTypes.number,
@@ -19,13 +18,15 @@ export default class Todo extends Component {
   render() {
     return (
       <div className={styles.todo}>
-        { this.props.content }
+        <div className={styles.todoContent}>
+          { this.props.content }
+        </div>
         <div onClick={this.handleClose} className={styles.closeTodo}>
           x
         </div>
       </div>
-    );
+    )
   }
 }
 
-Todo.propTypes = propTypes;
+Todo.propTypes = propTypes
