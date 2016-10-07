@@ -51,6 +51,11 @@
   display: table-cell;
   color: darkgray;
   cursor: pointer;
+  user-select: none;
+}
+
+.closeTodo:hover {
+  color: rgba(255,0,0,0.4);
 }
 
 .daruma {
