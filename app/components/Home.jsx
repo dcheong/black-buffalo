@@ -21,7 +21,7 @@ export default class Home extends Component {
           <InputTodo add={this.props.addTodo} />
           {
             this.props.todos.map(todo =>
-              <Todo closeTodo={self.props.removeTodo} id={todo.id} content={todo.content} />)
+              <Todo closeTodo={self.props.removeTodo} todo={todo} />)
           }
         </div>
       </div>

@@ -43,6 +43,7 @@ app.on('ready', async () => {
     resizeable: false
   })
 
+
   mainWindow.loadURL(`file://${__dirname}/app/app.html`)
 
   mainWindow.webContents.on('did-finish-load', () => {

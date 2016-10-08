@@ -6,8 +6,8 @@ export default function todo(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
       return [
-        { id: state.length, content: action.content },
-        ...state
+        ...state,
+        { id: state.length, content: action.content }
       ]
     case REMOVE_TODO:
       return state.filter(({ id }) => id !== action.index)
